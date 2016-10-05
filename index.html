@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html ng-app="TubeTravelApp" lang="en" class="demo-1 no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<title>Tube Traveler</title>
+		<meta name="description" content="A tutioral how to create awesome and great looking Video Parallax Background by using CSS3. Video parallax is modify version of full screen video background." />
+		<meta name="keywords" content="Video Parallax Background, parallax background, parallax effect, parallax video backgroun" />
+		<meta name="author" content="Codeconvey" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/cssparallax.css" />
+		<!--[if IE]>
+  		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+        <script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		  ga('create', 'UA-47356263-1', 'codeconvey.com');
+		  ga('send', 'pageview');
+		 
+		</script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="app/app.js"></script>
+	</head>
+	<body ng-controller="HomeCtrl">
+		<div class="main">
+        
+			
+            
+            <!-- Top Navigation -->
+<!-- 			<div class="cctop clearfix">
+               <a href="http://codeconvey.com/Tutorials/css-tabs/"><span><i class="fa fa-arrow-left"></i> Previous Demo</span></a>
+               <span class="right"><a href="http://codeconvey.com/?p=580"><span><i class="fa fa-edit"></i> Back to the Codeconvey Article</span></a></span>
+			</div> -->
+            
+           
+			<div class="wrapper">
+				
+                <div class="ccparallaxeff">
+
+                 <!--    <div class="plax ccparallax ccparallax-one">
+                      <div class="container">
+                        	<h1>Tube Traveler</h1>
+                      </div>
+                    </div>
+                     -->
+                    <div class="crt-parallaxvideo">
+                      <video autoplay muted loop>
+                            <source src="http://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                            <source src="http://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
+                        </video>
+                      <h1>{{ year }}</h1>
+                      <input type="text" ng-model="year">
+                    </div>
+                    
+                    <div class="plax content">
+                      <div class="container">
+                        <div class="headlines">
+                            <h2>Responisve Design</h2>
+                            <p>Work on all major devices</p>
+                        </div>
+                       <!--  <div class="contentarea">
+                        <h2>Lorem Ipsum Dolor</h2>
+                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ac dapibus dolor. Donec est elit, pellentesque eleifend risus euismod, mattis semper risus. Vestibulum dignissim, velit lacinia viverra bibendum, turpis nisi consequat odio, in rhoncus est purus a sem. Praesent orci velit, laoreet vitae ornare quis, pretium non nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam quis volutpat mi. Donec cursus tincidunt quam vitae convallis. Nullam sollicitudin erat at nisi porttitor tristique. Nulla non eros eget nulla accumsan malesuada vitae eget tellus. Sed ut mauris ut dolor tincidunt fringilla et nec lorem. Phasellus non lacus sodales arcu vestibulum gravida. Fusce eu massa nisl.</p>
+                        
+                        <p>Vestibulum pellentesque finibus sem, fringilla pharetra dolor dictum non. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis et est in ex eleifend rutrum eu ac neque. Cras non pellentesque nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed massa id purus finibus lacinia id sit amet nunc. Mauris sed felis consectetur tortor rhoncus porta sed consectetur justo. Etiam dui arcu, sollicitudin eu scelerisque quis, condimentum nec nulla. Suspendisse et orci vitae ligula molestie viverra vitae et dolor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                        
+                        <p>Nunc a metus eget erat varius volutpat. Etiam condimentum fringilla nisl, at blandit neque finibus et. Aenean dignissim lectus a sapien facilisis rutrum. Donec sodales eu risus sed molestie. Nulla luctus consectetur vehicula. Sed vehicula cursus risus, quis hendrerit quam interdum sit amet. Vestibulum ultricies neque at aliquam venenatis. Maecenas laoreet auctor nulla in pharetra.</p>
+                        </div> -->
+
+                      </div>
+                    </div>
+                    
+                    
+                     <div class="crt-parallaxvideo">
+                   		<video autoplay muted loop>
+                            <source src="http://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                            <source src="http://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
+                      	</video>
+                    	<h1>Video Background</h1>
+                    </div>
+                   
+                    
+                    <div class="plax content">
+                      <div class="container">
+                        <div class="headlines">
+                            <h2>Responisve Design</h2>
+                            <p>Work on all major devices</p>
+                        </div>
+                        <div class="contentarea">
+                        <h2>Lorem Ipsum Dolor</h2>
+                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ac dapibus dolor. Donec est elit, pellentesque eleifend risus euismod, mattis semper risus. Vestibulum dignissim, velit lacinia viverra bibendum, turpis nisi consequat odio, in rhoncus est purus a sem. Praesent orci velit, laoreet vitae ornare quis, pretium non nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam quis volutpat mi. Donec cursus tincidunt quam vitae convallis. Nullam sollicitudin erat at nisi porttitor tristique. Nulla non eros eget nulla accumsan malesuada vitae eget tellus. Sed ut mauris ut dolor tincidunt fringilla et nec lorem. Phasellus non lacus sodales arcu vestibulum gravida. Fusce eu massa nisl.</p>
+                        
+                        <p>Vestibulum pellentesque finibus sem, fringilla pharetra dolor dictum non. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis et est in ex eleifend rutrum eu ac neque. Cras non pellentesque nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed massa id purus finibus lacinia id sit amet nunc. Mauris sed felis consectetur tortor rhoncus porta sed consectetur justo. Etiam dui arcu, sollicitudin eu scelerisque quis, condimentum nec nulla. Suspendisse et orci vitae ligula molestie viverra vitae et dolor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                        
+                        <p>Nunc a metus eget erat varius volutpat. Etiam condimentum fringilla nisl, at blandit neque finibus et. Aenean dignissim lectus a sapien facilisis rutrum. Donec sodales eu risus sed molestie. Nulla luctus consectetur vehicula. Sed vehicula cursus risus, quis hendrerit quam interdum sit amet. Vestibulum ultricies neque at aliquam venenatis. Maecenas laoreet auctor nulla in pharetra.</p>
+                        </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="plax ccparallax ccparallax-two">
+                      <div class="container">
+                        <h1>Hey, Awesome Stuff</h1>
+                      </div>
+                    </div>
+                    
+                    
+                    
+                    
+                    <div class="plax content">
+                      <div class="container">
+                        <div class="headlines">
+                            <h2>Nice Effect</h2>
+                            <p>All in just one place</p>
+                        </div>                     
+                      </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="plax ccparallax ccparallax-three">
+                      <div class="container">
+                        <h1>Design as you want</h1>
+                      </div>
+                    </div>
+                    
+                    <div class="plax content">
+                      <div class="container">
+                        <div class="headlines">
+                            <h2>The End</h2>
+                            <p>Thanks for visting</p>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                
+			</div>
+             
+			
+		</div><!-- /container -->
+	</body>
+</html>
