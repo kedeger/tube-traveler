@@ -10,7 +10,7 @@
 		<meta name="author" content="Codeconvey" />
 		<link rel="shortcut icon" href="../favicon.ico">
 		<link rel="stylesheet" type="text/css" href="css/demo.css" />
-        <link rel="stylesheet" type="text/css" href="css/cssparallax.css" />
+    <link rel="stylesheet" type="text/css" href="css/cssparallax.css" />
 		<!--[if IE]>
   		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
@@ -50,18 +50,19 @@
                      -->
                     <div class="crt-parallaxvideo">
                       <video autoplay muted loop>
-                            <source src="http://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-                            <source src="http://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
+                            <source ng-src="{{link}}" type="video/mp4">
+                            <!-- <source src="http://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg"> -->
                         </video>
                       <h1>{{ year }}</h1>
-                      <input type="text" ng-model="year">
                     </div>
                     
                     <div class="plax content">
                       <div class="container">
                         <div class="headlines">
-                            <h2>Responisve Design</h2>
-                            <p>Work on all major devices</p>
+                         <form ng-submit="submit()">
+                        <input type="text" ng-model="year">
+                        <input type="submit" id="submit" value="Submit" />
+                      </form>
                         </div>
                        <!--  <div class="contentarea">
                         <h2>Lorem Ipsum Dolor</h2>
@@ -78,8 +79,8 @@
                     
                      <div class="crt-parallaxvideo">
                    		<video autoplay muted loop>
-                            <source src="http://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-                            <source src="http://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
+                            <source src="#" type="video/mp4">
+                          <!--   <source src="http://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg"> -->
                       	</video>
                     	<h1>Video Background</h1>
                     </div>
@@ -143,5 +144,6 @@
              
 			
 		</div><!-- /container -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	</body>
 </html>
