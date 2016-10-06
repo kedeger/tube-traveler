@@ -18,8 +18,9 @@ app.get('/scrape/:year', function(req, res) {
     // console.log(iframe);
     // res.send({data: data});
     var youtubeId = $('.youtubeID')[0].attribs.value;
-    var link = 'https://www.youtube.com/watch?v='+youtubeId;
-    res.send({link: link})
+
+    var link = 'http://www.youtube.com/embed/'+youtubeId;
+    res.send({link: link, youtubeId: youtubeId})
 
     // res.send({link: link})
     // .map(function(index, element) {

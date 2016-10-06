@@ -11,6 +11,7 @@
 		<link rel="shortcut icon" href="../favicon.ico">
 		<link rel="stylesheet" type="text/css" href="css/demo.css" />
     <link rel="stylesheet" type="text/css" href="css/cssparallax.css" />
+
 		<!--[if IE]>
   		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
@@ -24,9 +25,13 @@
 		 
 		</script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-sanitize.js"></script>
+    <script src="path/to/angular.js"></script>
+    <script src="path/to/angular-sanitize.js"></script>
     <script src="app/app.js"></script>
 	</head>
 	<body ng-controller="HomeCtrl">
+    <div data-ng-init="getYear()"></div>
 		<div class="main">
         
 			
@@ -48,21 +53,36 @@
                       </div>
                     </div>
                      -->
-                    <div class="crt-parallaxvideo">
-                      <video autoplay muted loop>
-                            <source ng-src="{{link}}" type="video/mp4">
-                            <!-- <source src="http://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg"> -->
-                        </video>
+                     <div class="crt-parallaxvideo">
+                     <iframe autoplay id="player" type="text/html" width="100%" height="150%" 
+                      ng-src="{{ 'http://www.youtube.com/embed/' + youtubeId + '?autoplay=1'}}"
+                      frameborder="0"></iframe>
+                     <!--  <video id="player1" autoplay muted loop>
+                            <source src="https://www.youtube.com/watch?v=h20YomuQ-XQ" type="video/youtube">
+                      </video> -->
                       <h1>{{ year }}</h1>
+                      <input type="text" ng-model="year">
                     </div>
+                    <!-- <div class="crt-parallaxvideo">
+                      <video ng-if="link" autoplay muted loop>
+                            <source src="https://www.youtube.com/watch?v=h20YomuQ-XQ" type="video/mp4">
+                        </video>
+                    </div> -->
                     
                     <div class="plax content">
                       <div class="container">
                         <div class="headlines">
-                         <form ng-submit="submit()">
+                        <input class="form-control" ng-model="year">
+                          </div>
+                          <button type="button" ng-click="getYear()">Get Year</button>
+                        </div>
+
+
+
+                        <!--  <form ng-submit="submit()">
                         <input type="text" ng-model="year">
                         <input type="submit" id="submit" value="Submit" />
-                      </form>
+                      </form> -->
                         </div>
                        <!--  <div class="contentarea">
                         <h2>Lorem Ipsum Dolor</h2>
@@ -77,13 +97,12 @@
                     </div>
                     
                     
-                     <div class="crt-parallaxvideo">
+                   <!--   <div class="crt-parallaxvideo">
                    		<video autoplay muted loop>
                             <source src="#" type="video/mp4">
-                          <!--   <source src="http://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg"> -->
                       	</video>
                     	<h1>Video Background</h1>
-                    </div>
+                    </div> -->
                    
                     
                     <div class="plax content">
@@ -96,7 +115,9 @@
                         <h2>Lorem Ipsum Dolor</h2>
                         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ac dapibus dolor. Donec est elit, pellentesque eleifend risus euismod, mattis semper risus. Vestibulum dignissim, velit lacinia viverra bibendum, turpis nisi consequat odio, in rhoncus est purus a sem. Praesent orci velit, laoreet vitae ornare quis, pretium non nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam quis volutpat mi. Donec cursus tincidunt quam vitae convallis. Nullam sollicitudin erat at nisi porttitor tristique. Nulla non eros eget nulla accumsan malesuada vitae eget tellus. Sed ut mauris ut dolor tincidunt fringilla et nec lorem. Phasellus non lacus sodales arcu vestibulum gravida. Fusce eu massa nisl.</p>
                         
-                        <p>Vestibulum pellentesque finibus sem, fringilla pharetra dolor dictum non. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis et est in ex eleifend rutrum eu ac neque. Cras non pellentesque nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed massa id purus finibus lacinia id sit amet nunc. Mauris sed felis consectetur tortor rhoncus porta sed consectetur justo. Etiam dui arcu, sollicitudin eu scelerisque quis, condimentum nec nulla. Suspendisse et orci vitae ligula molestie viverra vitae et dolor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                        <p>{{ myLink }} (myLink)</p>
+                        <br>
+                        <p>{{ youtubeId }} (youtube id)</p>
                         
                         <p>Nunc a metus eget erat varius volutpat. Etiam condimentum fringilla nisl, at blandit neque finibus et. Aenean dignissim lectus a sapien facilisis rutrum. Donec sodales eu risus sed molestie. Nulla luctus consectetur vehicula. Sed vehicula cursus risus, quis hendrerit quam interdum sit amet. Vestibulum ultricies neque at aliquam venenatis. Maecenas laoreet auctor nulla in pharetra.</p>
                         </div>
