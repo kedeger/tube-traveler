@@ -11,7 +11,7 @@ tubeTravelApp.config(['$locationProvider', function($locationProvider){
 }])
 
 tubeTravelApp.controller('HomeCtrl', ['$scope', '$http', '$sce', function($scope, $http, $sce) {
-  $scope.year = '1945';
+  $scope.year = '1900';
   $scope.min = 1900;
   $scope.max = 2016;
 

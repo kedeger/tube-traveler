@@ -41,6 +41,20 @@ app.get('/scrape/:year', function(req, res) {
 })
 })
 
+//https://www.google.com/search?q=1957&biw=1280&bih=721&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiw7beyisfPAhUQ7GMKHYMsCfYQ_AUIBigB#tbm=isch&q=2011+photos
+
+app.get('/grab/:year', function(req, res) {
+       request('https://www.google.com/search?q=1957&biw=1280&bih=721&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiw7beyisfPAhUQ7GMKHYMsCfYQ_AUIBigB#tbm=isch&q=' + req.params.year + '+photos', function (error, response, data) {
+  if (!error && response.statusCode == 200) {
+    var $ = cheerio.load(data);
+    var youtubeId = $('.youtubeID')[0].attribs.value;
+
+    var link = 'http://www.youtube.com/embed/'+youtubeId;
+    res.send({link: link, youtubeId: youtubeId})
+  }
+})
+})
+
 app.get('/*', function(req, res) {
  res.sendFile(__dirname + '/index.html');
 });

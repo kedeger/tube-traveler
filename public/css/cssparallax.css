@@ -16,8 +16,8 @@
 
 .crt-parallaxvideo{ 
 	height: 300px;
-	padding-bottom: 50px;
-    padding-top: 50px;
+/*	padding-bottom: 50px;
+    padding-top: 50px;*/
    
 }
 .crt-parallaxvideo video{ 
@@ -89,4 +89,10 @@
 }
 .plax .contentarea, .plax .contentarea h2{
 	color:#FFF;	
+}
+
+/*my css additions:*/
+#timeRange {
+  text-align: center;
+  padding-bottom: 100px;
 }
