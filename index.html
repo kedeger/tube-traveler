@@ -76,16 +76,35 @@
                           <input type="range" name="range" min="{{min}}"  max="{{max}}" ng-model="year">
                           <br>
                           <button type="button" ng-click="getYear()">Time Machine</button><br><br>
+                          <h1>Welcome to Tube Travlr</h1>
+
+                          <div class="card" ng-repeat="image in images">
+                            <img ng-src="{{ image.url }}">
+                          </div>
+
                         </div>
                         </div>
                         <div class="contentarea">
+
                         </div>
                       </div>
                     </div>
+
           
-<!--                     <div class="plax ccparallax ccparallax-two">
+                    <div class="plax ccparallax">
                       <div class="container">
-                        <h1>Hey, Awesome Stuff</h1>
+                        <div class="row">
+                        <form class="col s12">
+                          <div class="row">
+                            <div class="input-field col s12">
+                              <textarea id="textarea1" ng-model="newComment" class="materialize-textarea"></textarea>
+                              <br><br>
+                              <button>Comment</button>
+                              <label for="textarea1"></label>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
                       </div>
                     </div>
                     
@@ -111,12 +130,17 @@
                     
                     <div class="plax content">
                       <div class="container">
+                        <ul class="comment-list">
+                              <li ng-repeat="comment in comments">
+                                <p>{{ comment.content }}</p>
+                              </li>
+                            </ul>
                         <div class="headlines">
                             <h2>The End</h2>
                             <p>Thanks for visting</p>
                         </div>
                       </div>
-                    </div> -->
+                    </div>
                 </div>
                 
 			</div>

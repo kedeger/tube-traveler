@@ -26,14 +26,12 @@ tubeTravelApp.controller('HomeCtrl', ['$scope', '$http', '$sce', function($scope
         $scope.myLink = $sce.trustAsResourceUrl($scope.link.url);
       }
 
-
-
-
       // $scope.link = { 'text' : '<a href="#">Link</a>'};
       // // $scope.sanLink = $sce.trustAsResourceUrl($scope.link.text);
       // $sce.trustAsHtml($scope.link.text);
       $scope.myLink = res.data.link;
       $scope.youtubeId = res.data.youtubeId;
+      $scope.images = res.data.images;
       console.log(res.data.youtubeId);
     }, function error(res) {
       console.log(res);
