@@ -26,7 +26,7 @@ app.get('/scrape/:year', function(req, res) {
       var link = 'http://www.youtube.com/embed/'+ youtubeId;
 
       google.list({
-        keyword: req.params.year,
+        keyword: req.params.year + 'photos',
         num: 25,
         detail: true,
         nightmare: {
